@@ -19,7 +19,7 @@
 }
 
 #page-create-point header span {
-  background-image: url(/nlw_1/assets/arrow-left.svg);
+  background-image: url(/public/assets/arrow-left.svg);
   display: flex;
   margin-right: 10px;
   width: 20px;
