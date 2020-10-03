@@ -1,0 +1,153 @@
+#page-create-point {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-create-point header a {
+  color: var(--title-color);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#page-create-point header span {
+  background-image: url(/nlw_1/assets/arrow-left.svg);
+  display: flex;
+  margin-right: 10px;
+  width: 20px;
+  height: 24px;
+}
+
+form {
+  background-color: white;
+  /*Alinhamento de caixa (pelo lado de fora da caixa)*/
+  margin: 80px auto;
+  /*Preenchimento interno da caixa formulario*/
+  padding: 64px;
+  max-width: 730px;
+}
+
+form h1 {
+  font-size: 36px;
+}
+
+form fieldset {
+  margin-top: 64px;
+  border:0;
+}
+
+form legend {
+  margin-bottom: 40px;
+}
+
+form legend h2 {
+  font-size: 24px;
+}
+
+form .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+form .field-group {
+  display: flex;
+}
+
+form input, select {
+  background-color: var(--second-color);
+  border: 0;
+  padding: 16px 24px; 
+  font-size: 16px;
+  border-radius: 8px;
+  /*outline está alterando a cor do input, quando selecionado
+  Utilazando o alpha para a transparência nesse campo*/
+  outline-color: #2fb86e60;
+}
+
+form select {
+  /*Para que seja aplicado a estilização do campo acima, desabilitamos alguns kits
+  utilizados nos navegadores nessas tags select*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/*Estilização no fieldgroup que está com um field seguido de outro field*/
+form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+form button {
+  width: 260px;
+  height: 30px;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 40px;
+  transition: background-color 400ms;
+  /*Tempo da transição para altura do button*/
+  transition: height 1000ms;
+}
+
+form button:hover {
+  background-color: var(--primaryHover-color);
+  /*Atribui essa mudança na altura, para testes*/
+  height: 56px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.items-grid li {
+  background-color: #f5f5f5;
+  list-style: none;
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  height: 180px;
+  padding: 32px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+}
+
+.items-grid span {
+  margin-top: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: var(--title-color);
+}
+
+.items-grid li.selected {
+  background: #e1faec;
+  border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+  pointer-events: none;
+}
